@@ -5,22 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Page</title>
     <link rel="stylesheet" href="/static/css/styles.css">
+    <style>
+    .dropdown {
+        width: 100% !important;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>Input Form</h1>
         <form method="post" action="/calculate">
          <div id="errorContainer"></div> <!-- Container for error messages -->
-            <label for="input1">Input 1:</label>
+            <label for="input1">Score 1:</label>
             <input type="number" id="input1" name="input1" value="{{ input1 | default('') }}" required>
 
-            <label for="input2">Input 2:</label>
+            <label for="input2">Score 2:</label>
             <input type="number" id="input2" name="input2" value="{{ input2 | default('') }}" required>
 
-            <label for="input3">Input 3:</label>
+            <label for="input3">Score 3:</label>
             <input type="number" id="input3" name="input3" value="{{ input3 | default('') }}" required>
             
-            <label for="input4">Input 4:</label>
+            <label for="input4">Score 4:</label>
             <input type="number" id="input4" name="input4" value="{{ input4 | default('') }}" required>
 
             <label for="input5">Input 5:</label>

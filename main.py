@@ -17,4 +17,4 @@ async def read_form(request: Request):
 @app.post("/calculate")
 async def calculate_output(request: Request, input1: float = Form(...), input2: float = Form(...),input4: float = Form(...),input5: float = Form(...), input6: float = Form(...), input3: float = Form(...)):
     output = input1 + input2 + input3 + input4 + input5 + input6
-    return templates.TemplateResponse("index.html", {"request": request, "output": output})
+    return templates.TemplateResponse("index.html", {"request": request, "output": output,"input1":input1})
